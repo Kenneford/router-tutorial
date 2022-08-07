@@ -1,0 +1,30 @@
+#modal{
+    background: #cccc;
+    height: 100vh;
+}
+.openModalBtn{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background: #000;
+    font-size: 1.2em;
+}
+#modal{
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+.modal-box{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: white;
+}
