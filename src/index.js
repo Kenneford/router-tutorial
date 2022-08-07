@@ -10,30 +10,30 @@ import Invoice from './Invoice';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="expenses" element={<Expenses />} />
-        <Route path="invoices" element={<Invoices />} >
-            <Route index element={
-                <main style={{ paddind: "1rem" }}>
-                    <p>Select an issue</p>
-                </main>
-            } />
-          <Route path=':invoiceID' element={<Invoice />} />
-        </Route>
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: "1rem" }}>
-                <p>Ooops! There's nothing here...😒</p>
-            </main>
-          }
-        />
-      </Routes>
-    </Router>
-  </React.StrictMode>
+    <React.StrictMode>
+        <Router>
+            <Routes>
+                <Route path="/" element={<App />} exact/>
+                <Route path="expenses" element={<Expenses />} />
+                <Route path="invoices" element={<Invoices />} >
+                    <Route index element={
+                        <main style={{ paddind: "1rem" }}>
+                            <p>Select an issue</p>
+                        </main>
+                    } />
+                    <Route path=':invoiceID' element={<Invoice />} />
+                </Route>
+                <Route
+                    path="*"
+                    element={
+                        <main style={{ padding: "1rem" }}>
+                            <p>Ooops! There's nothing here...😒</p>
+                        </main>
+                    }
+                />
+            </Routes>
+        </Router>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
